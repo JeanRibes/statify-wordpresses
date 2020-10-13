@@ -1,0 +1,15 @@
+<html>
+	<h1>
+		Status
+	</h1>
+	{{$b := "0"}}
+	<ul>
+		{{range .deps}}
+		{{$replicas := html .Spec.Replicas}} <!-- attention c'est un pointeur donc il faut un moyen de le déréférencer ... -->
+			<li>{{.Name}} {{if eq $replicas "0" }} <a href="/start/{{.Name}}">démarrer</a> {{else}} <a href="/stop/{{.Name}}">arrêter</a>
+			État: {{.Status.AvailableReplicas}}/{{.Status.Replicas}}
+			 {{end}}
+			 </li>
+		{{end}}
+	</ul>
+</html>

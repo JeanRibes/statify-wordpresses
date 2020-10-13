@@ -1,0 +1,14 @@
+mariadb:
+  enabled: false
+externalDatabase:
+  host: big-mariadb
+  user: wordpress1
+  password: wordpress1
+  database: wp1
+wordpressSkipInstall: true
+wordpressScheme: http
+service:
+  type: ClusterIP
+ingress:
+  enabled: true
+  hostname: wp1.172.17.0.1.nip.io

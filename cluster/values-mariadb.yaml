@@ -1,0 +1,7 @@
+auth:
+  rootPassword: Hjklhjkl22
+  database: wp1
+  username: wordpress1
+  password: wordpress1
+volumePermissions:
+  enabled: true
